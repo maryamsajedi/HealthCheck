@@ -1,0 +1,1 @@
+from Healthcheck.celery import celery_app
