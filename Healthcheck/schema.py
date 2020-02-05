@@ -1,17 +1,11 @@
 import graphene
-# import graphql_jwt
 
-from services.schema  import ServiceMutation, ServiceQuery
+from services.schema  import ServiceMutation
 
-class Query(
-    ServiceQuery,
-    graphene.ObjectType
-):
-    pass
 
 class Mutations(
     ServiceMutation,
 ):
     pass
 
-schema = graphene.Schema(query = Query, mutation = Mutations)
+schema = graphene.Schema(mutation = Mutations)
